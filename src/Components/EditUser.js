@@ -9,10 +9,9 @@ import { useNavigate, useParams } from 'react-router-dom'
   
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const {id}=useParams()  
+  const {id}=useParams();  
   const users=useSelector(state=>state.reducer1)
   const currentuser=users.find((users)=>users.id === parseInt(id))
-  
   
   useEffect(()=>{
      if(currentuser)
@@ -21,7 +20,7 @@ import { useNavigate, useParams } from 'react-router-dom'
       setEmail(currentuser.email)
       setNumber(currentuser.number)
      }
-  },[currentuser])
+     },[currentuser])
   
   function updateuser(e)
   {
@@ -37,7 +36,7 @@ import { useNavigate, useParams } from 'react-router-dom'
   }
   return (
     
-      <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
+        <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
           <div className='w-50   text-white p-4' style={{backgroundColor:'#81C784'}}>
             <h1 className='text-center'>Edit User</h1>
             <form>

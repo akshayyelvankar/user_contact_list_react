@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux'
+
 const Home = () => {
+  
   const data=useSelector(state=>state.reducer1)
   const dispatch=useDispatch()
   console.log(data)
@@ -10,6 +12,7 @@ const Home = () => {
   {
     dispatch({type:"DELETE" ,payload:id})
   }
+
   return (
     <div className='container'>
         <h1 className='text-center m-2'>User Contact List</h1>

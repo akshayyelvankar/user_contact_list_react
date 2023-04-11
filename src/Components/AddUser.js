@@ -12,6 +12,7 @@ const AddUser = () => {
 
   const dispatch=useDispatch();
   const navigate=useNavigate()
+  
   function addUser(e)
   {
      e.preventDefault()
@@ -20,8 +21,7 @@ const AddUser = () => {
          name,
          email,
          number
-
-     }
+   }
      dispatch({type:"ADD",payload:data})
      navigate('/')
   }
@@ -53,4 +53,4 @@ const AddUser = () => {
   )
 }
 
-export default AddUser
+export default AddUser;
