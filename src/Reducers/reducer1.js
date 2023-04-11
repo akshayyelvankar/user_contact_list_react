@@ -13,7 +13,11 @@ const reducer1=(state=intialState,action)=>{
         case "ADD":
             state=[...state,action.payload]
             return state;
-
+        
+            case "DELETE":
+            const deleteuser=state.filter((item)=>item.id !== action.payload && item)  
+            state=deleteuser
+            return state;  
          default:
             return state;   
       }

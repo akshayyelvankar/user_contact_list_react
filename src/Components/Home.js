@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {useSelector} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 const Home = () => {
   const data=useSelector(state=>state.reducer1)
+  const dispatch=useDispatch()
   console.log(data)
   
+  function deleteUser(id)
+  {
+    dispatch({type:"DELETE" ,payload:id})
+  }
   return (
     <div className='container'>
         <h1 className='text-center m-2'>User Contact List</h1>
@@ -29,7 +34,7 @@ const Home = () => {
                 <td>{user.number}</td>
                 <td>
                   <button className='btn btn-success mx-2'>Edit</button>
-                  <button className='btn btn-danger'>Delete</button>
+                  <button className='btn btn-danger'onClick={()=>deleteUser(user.id)}>Delete</button>
                   </td>
               </tr>
               ))

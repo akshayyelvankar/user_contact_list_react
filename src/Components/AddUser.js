@@ -25,6 +25,8 @@ const AddUser = () => {
      dispatch({type:"ADD",payload:data})
      navigate('/')
   }
+
+ 
   return (
     
         <div className='d-flex w-100 vh-100 justify-content-center align-items-center'>
