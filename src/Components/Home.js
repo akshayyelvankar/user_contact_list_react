@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux'
 const Home = () => {
   const data=useSelector(state=>state.reducer1)
@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div className='container'>
         <h1 className='text-center m-2'>User Contact List</h1>
+        <Link className='btn btn-primary' to={'/adduser'}>Create +</Link>
         <table className='table table-striped'>
           <thead>
             <tr>
