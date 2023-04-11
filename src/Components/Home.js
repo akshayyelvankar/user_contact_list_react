@@ -33,7 +33,7 @@ const Home = () => {
                 <td>{user.email}</td>
                 <td>{user.number}</td>
                 <td>
-                  <button className='btn btn-success mx-2'>Edit</button>
+                  <Link className='btn btn-success mx-2' to={`/edituser/${user.id}`}>Edit</Link>
                   <button className='btn btn-danger'onClick={()=>deleteUser(user.id)}>Delete</button>
                   </td>
               </tr>

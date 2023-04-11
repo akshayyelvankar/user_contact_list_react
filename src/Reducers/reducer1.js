@@ -18,6 +18,12 @@ const reducer1=(state=intialState,action)=>{
             const deleteuser=state.filter((item)=>item.id !== action.payload && item)  
             state=deleteuser
             return state;  
+
+            case "UPDATE":
+             const updateuser=state.map((item)=>item.id === action.payload.id ? action.payload:item)
+             state=updateuser
+             return updateuser;
+
          default:
             return state;   
       }
