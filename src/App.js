@@ -5,7 +5,7 @@ import Home from './Components/Home';
 import AddUser from './Components/AddUser';
 import EditUser from './Components/EditUser';
 import Navbar from './Components/Navbar';
-
+import 'bootstrap/dist/css/bootstrap.css';
 function App() {
   return (
     <div className="">
@@ -21,3 +21,4 @@ function App() {
 
 export default App;
 
+    
